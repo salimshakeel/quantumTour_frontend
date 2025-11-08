@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/quantumTour_frontend/static/css/main.d9ff847e.css",
+    "main.js": "/quantumTour_frontend/static/js/main.bbbeeed6.js",
+    "static/js/453.a1df9c69.chunk.js": "/quantumTour_frontend/static/js/453.a1df9c69.chunk.js",
+    "static/media/before1.mp4": "/quantumTour_frontend/static/media/before1.fe9babdf01363d9efa0c.mp4",
+    "static/media/before2.mp4": "/quantumTour_frontend/static/media/before2.f3816c108021eaab7302.mp4",
+    "static/media/HIW1.jpg": "/quantumTour_frontend/static/media/HIW1.a37fa6f45f76921aa9da.jpg",
+    "static/media/HIW3.jpg": "/quantumTour_frontend/static/media/HIW3.9ec7e438ffece06a7f05.jpg",
+    "static/media/before2.png": "/quantumTour_frontend/static/media/before2.8a28f0315164100fd85f.png",
+    "static/media/house.png": "/quantumTour_frontend/static/media/house.a91801f97967579454c0.png",
+    "static/media/before1.png": "/quantumTour_frontend/static/media/before1.f7bb12d12958e9158821.png",
+    "static/media/HIW2.jpg": "/quantumTour_frontend/static/media/HIW2.3753a7f87361ae01dad6.jpg",
+    "static/media/building.png": "/quantumTour_frontend/static/media/building.8a64a13b88ce5db96943.png",
+    "static/media/century.png": "/quantumTour_frontend/static/media/century.c244b1df7289be08c8bb.png",
+    "static/media/coldwell.png": "/quantumTour_frontend/static/media/coldwell.3aafded8d0423747ce99.png",
+    "static/media/bootstrap-icons.woff?": "/quantumTour_frontend/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
+    "static/media/clouds.png": "/quantumTour_frontend/static/media/clouds.ee6b4d6664e01247d912.png",
+    "static/media/whissel.png": "/quantumTour_frontend/static/media/whissel.c89d584b1122ea4a67ff.png",
+    "static/media/bootstrap-icons.woff2?": "/quantumTour_frontend/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
+    "static/media/reimax.png": "/quantumTour_frontend/static/media/reimax.756aaed21ef2989fbc54.png",
+    "static/media/bhhs.png": "/quantumTour_frontend/static/media/bhhs.a2c46f9215f199fe3f2f.png",
+    "static/media/building1.png": "/quantumTour_frontend/static/media/building1.fcb3d823310563123e49.png",
+    "static/media/pacific.png": "/quantumTour_frontend/static/media/pacific.fc3798bc5abeb5e153d3.png",
+    "static/media/towne.png": "/quantumTour_frontend/static/media/towne.6c2f6eba542c0fd609c9.png",
+    "static/media/willis.png": "/quantumTour_frontend/static/media/willis.0e5f66183296cbb56411.png",
+    "static/media/exp.png": "/quantumTour_frontend/static/media/exp.42cb0ec80146d4c46f19.png",
+    "index.html": "/quantumTour_frontend/index.html",
+    "main.d9ff847e.css.map": "/quantumTour_frontend/static/css/main.d9ff847e.css.map",
+    "main.bbbeeed6.js.map": "/quantumTour_frontend/static/js/main.bbbeeed6.js.map",
+    "453.a1df9c69.chunk.js.map": "/quantumTour_frontend/static/js/453.a1df9c69.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d9ff847e.css",
+    "static/js/main.bbbeeed6.js"
+  ]
+}
