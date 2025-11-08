@@ -1,0 +1,214 @@
+.testimonialsSection {
+  padding: 6rem 1rem;
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.tagline {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #004aad;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  opacity: 1; 
+  transform: translateX(0); 
+}
+
+.titleUnderline {
+  width: 80px;
+  height: 4px;
+  background: #004aad;
+  margin: 0.5rem auto;
+  border-radius: 2px;
+}
+
+/* Grid layout */
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.gridItem {
+  display: flex;
+  justify-content: center;
+}
+
+/* Center the last card when there's an odd number */
+.testimonialsGrid:has(> :nth-child(10):last-child) {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.testimonialsGrid:has(> :nth-child(10):last-child) > :last-child {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Glassmorphism Card */
+.testimonialCard {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.clientImage {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-bottom: 1rem;
+}
+
+.clientName {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+.clientRole {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1d4ed8;
+  margin-bottom: 1rem;
+}
+
+.testimonialText {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #1e293b;
+  font-style: italic;
+  margin-bottom: auto;
+}
+
+/* Mobile slider styles */
+.mobileSlider {
+  display: none;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.sliderContainer {
+  display: flex;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.slide {
+  flex: 0 0 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.sliderArrowLeft, .sliderArrowRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sliderArrowLeft {
+  left: 10px;
+}
+
+.sliderArrowRight {
+  right: 10px;
+}
+
+.sliderIndicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  gap: 0.5rem;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+  background-color: #004aad;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .testimonialsSection {
+    padding: 4rem 1rem;
+  }
+  
+  .testimonialsGrid {
+    display: none;
+  }
+  
+  .mobileSlider {
+    display: block;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobileSlider {
+    display: none;
+  }
+}

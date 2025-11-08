@@ -1,0 +1,234 @@
+.section {
+  position: relative;
+  padding: 5rem 0;
+  background: white;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Building Image */
+.buildingImage {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 600px;
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Container */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Title */
+.titleContainer {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.mainTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: black;
+}
+.subtitle {
+  font-size: 1.1rem;
+  color: #002244;
+  margin-top: 0.5rem;
+}
+
+/* Desktop Table */
+.desktopTable {
+  overflow-x: auto;
+}
+
+.comparisonTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 1rem;
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.tableHeader {
+background: linear-gradient(135deg, #a855f7, #1fb454 );
+  color: #fff;
+}
+.tableHeader th {
+  padding: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Rows */
+.tableRow {
+  background: rgb(237, 236, 236);
+  color: #000;
+  transition: 0.3s ease;
+}
+
+
+/* Cells */
+.categoryCell {
+  font-weight: 700;
+  text-align: center;
+  padding: 1.2rem;
+  color: black;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 1.7rem;
+}
+.featureCell {
+  text-align: left;
+  padding: 1rem;
+  font-weight: 500;
+}
+.aiCell {
+  font-weight: bold;
+  color: green;
+}
+.traditionalCell {
+  color: red;
+}
+.advantageCell {
+  font-weight: 600;
+  color: #003366;
+}
+
+/* Mobile Cards - Hidden by default */
+.mobileCards {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 1.8rem;
+  }
+  .buildingImage {
+    width: 350px;
+  }
+  
+  .desktopTable {
+    display: none;
+  }
+  
+  .mobileCards {
+    display: block;
+  }
+  
+  .categoryCard {
+    margin-bottom: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 14px;
+    padding: 1.5rem;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .categoryHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .categoryTitle {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #003366;
+    margin-left: 0.75rem;
+  }
+  
+  /* Comparison Card */
+  .comparisonCard {
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    color: #000;
+  }
+  
+  .featureTitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #003366;
+    text-align: center;
+  }
+  
+  .comparisonRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem 0;
+  }
+  
+  .serviceType {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+  }
+  
+  .aiIcon {
+    color: green;
+    margin-right: 0.5rem;
+  }
+  
+  .traditionalIcon {
+    color: red;
+    margin-right: 0.5rem;
+  }
+  
+  .serviceValue {
+    font-weight: 500;
+    text-align: right;
+  }
+  
+  .advantageBadge {
+    background: #003366;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .categoryCard {
+    padding: 1rem;
+  }
+  
+  .comparisonCard {
+    padding: 1rem;
+  }
+  
+  .comparisonRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .serviceValue {
+    margin-top: 0.25rem;
+    text-align: left;
+    width: 100%;
+    padding-left: 1.75rem;
+  }
+}

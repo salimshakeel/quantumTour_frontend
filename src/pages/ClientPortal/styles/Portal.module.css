@@ -1,0 +1,117 @@
+/* ----Portal.module.ccs ---- */
+:root{
+  --brand1:#a855f7;
+  --brand2:#1fb454;
+  --ink: rgba(255,255,255,.88);
+  --ink-weak: rgba(255,255,255,.66);
+  --panel: rgba(255,255,255,.03);
+}
+
+.portalContainer{ min-height:calc(100vh - 120px); padding:0; }
+
+.portalWrapper{
+  display:flex;
+  min-height:100%;
+  gap:24px;
+  padding:0 16px 24px;   
+}
+
+.sidebar{
+  width:280px;
+  padding:24px 12px;
+  background:#000;
+  border:none;
+}
+
+.screenWrap{
+  position:relative;
+  min-height:100dvh;
+  padding:56px 16px 80px;
+  background:
+    radial-gradient(1000px 600px at 12% -12%, rgba(168,85,247,.08), transparent 60%),
+    radial-gradient(1000px 520px at 108% 118%, rgba(34,197,94,.08), transparent 60%),
+    linear-gradient(180deg, var(--bg1), var(--bg0));
+  overflow: hidden;         
+}
+
+.portalTitle{ color:var(--ink); margin:0 0 12px; }
+.title{color: #fff;}
+
+.contentArea{
+  flex:1;
+  background:#000;
+  padding:24px 16px;
+  border:none;
+}
+
+
+.contentArea{
+  position: relative;               
+  display: flex;
+  flex-direction: column;
+  background: #000;                 
+  padding: 24px 16px;              
+}
+
+.backBtn{
+  position:absolute;
+  left:calc(50% - 540px);
+  transform:translateX(-16px);
+  border:1px solid rgba(148,163,184,.16);
+  background:rgba(255,255,255,.04);
+  color:#fff;
+  border-radius:999px;
+  padding:.45rem .8rem;
+  z-index:10;
+}
+
+.contentArea::before{
+  content:"";
+  position: absolute;
+  inset: 0;                        
+  border-radius: 16px;
+  border: 1px solid rgba(148,163,184,.16);
+  box-shadow: 0 22px 60px rgba(0,0,0,.42);
+  pointer-events: none;             
+  z-index: 0;
+}  
+
+.contentArea > *{
+  position: relative;
+  z-index: 1;
+  min-height: 80vh;                 
+  color: rgba(255,255,255,.86);
+}
+
+.contentArea h1,
+.contentArea h2,
+.contentArea h3{
+  color: rgba(255,255,255,.95);
+}
+
+
+/* Responsive table cells */
+@media (max-width: 992px) {
+
+  .sidebar :global(.nav-link) {
+    color: #fff !important;
+  }
+
+  .sidebar :global(.nav-link.active) {
+    background: linear-gradient(135deg, #1fb454 0, #15803d 100%) !important;
+    color: #fff !important;
+  }
+}
+
+/* Tablet and below: pin to the left edge inside content */
+@media (max-width: 1024px){
+  .backBtn{
+    left: 16px;          
+    transform: none;
+  }
+}
+
+
+.contentArea::before{ display:none; } 
+
+

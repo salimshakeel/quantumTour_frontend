@@ -1,0 +1,80 @@
+.footer {
+  background-color: black;
+  color: #fff;
+  padding: 3rem 0 2rem;
+  font-size: 0.9rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+background: linear-gradient(135deg, #a855f7, #1fb454 );
+background-clip: text;
+color: transparent;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.socialIcon {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  color: hsl(var(--primary));
+  transform: translateY(-3px);
+}
+
+.copyright {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.additionalLinks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 2rem;
+}
+
+.additionalLinks a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.additionalLinks a:hover {
+  color: hsl(var(--primary));
+}
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .socialLinks {
+    margin: 1rem 0;
+  }
+
+  .additionalLinks {
+    gap: 1rem;
+  }
+}

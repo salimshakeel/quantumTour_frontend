@@ -1,0 +1,709 @@
+/* OrderList Component Styles     */
+
+:root {
+  --brand1: #a855f7;
+  --brand2: #22c55e;
+  --hairline: rgba(148, 163, 184, 0.16);
+  --ink: rgba(255, 255, 255, 0.88);
+  --ink-strong: rgba(255, 255, 255, 0.96);
+  --ink-weak: rgba(255, 255, 255, 0.6);
+}
+
+.invoiceCard {
+  background: transparent;
+  color: #fff;
+  border: none;
+}
+
+/* Header */
+.invoiceHeader {
+  background: transparent !important;
+  color: #fff !important;
+  border-bottom: 1px solid var(--hairline) !important;
+  padding: 1rem 1.25rem !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--ink-strong);
+}
+
+.refreshButton {
+  color: #fff !important;
+  border: none !important;
+  border-radius: 10px;
+  padding: 0.55rem 0.95rem;
+  background-image: linear-gradient(135deg, var(--brand2), #15803d);
+  box-shadow: 0 10px 24px rgba(21, 128, 61, 0.28);
+  transition: transform 0.18s ease, filter 0.18s ease, box-shadow 0.18s ease;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.refreshButton:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 16px 30px rgba(21, 128, 61, 0.33);
+}
+
+/* Body */
+.invoiceBody {
+  background: transparent;
+  color: #fff !important;
+  padding: 0 1rem 1.25rem;
+}
+
+/* Orders Grid Layout */
+.ordersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Order Card */
+.orderCard {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--hairline);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+}
+
+.orderCard:hover {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.3) inset, 0 8px 20px rgba(0, 0, 0, 0.28);
+  transform: translateY(-2px);
+}
+
+/* Card Header */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--hairline);
+  flex-shrink: 0;
+}
+
+.orderBasicInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.orderStatus {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+.orderMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.orderId {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink-strong);
+}
+
+.orderDate {
+  font-size: 0.85rem;
+  color: var(--ink-weak);
+}
+
+.packageInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.packageName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink-strong);
+}
+
+.photosCount {
+  font-size: 0.85rem;
+  color: var(--ink-weak);
+}
+
+/* Card Content */
+.cardContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  min-height: 200px;
+}
+
+.sectionTitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ink-strong);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Video Section */
+.videoSection {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.videoPreviews {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.videoPreviewWrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.3);
+  flex: 1;
+  min-height: 200px;
+}
+
+.videoPlayer {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.videoPlayer:hover {
+  transform: scale(1.02);
+}
+
+.videoOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.videoPreviewWrapper:hover .videoOverlay {
+  opacity: 1;
+}
+
+.playIcon {
+  font-size: 3rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.fullscreenText {
+  font-size: 0.9rem;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
+
+.additionalVideos {
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.videoCount {
+  font-size: 0.85rem;
+  color: var(--ink-weak);
+  font-weight: 500;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+  border: 1px solid var(--hairline);
+}
+
+.noVideoPlaceholder {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px dashed var(--hairline);
+  border-radius: 12px;
+  padding: 2rem;
+  min-height: 200px;
+}
+
+.noVideoText {
+  color: var(--ink-weak);
+  font-style: italic;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Card Actions */
+.cardActions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--hairline);
+  flex-shrink: 0;
+  align-items: start;
+}
+
+.statusActions, .uploadAction {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.statusButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.statusButton {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statusButton:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.statusButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.statusActive {
+  background: linear-gradient(135deg, var(--brand2), #15803d) !important;
+  border-color: var(--brand2) !important;
+}
+
+/* Upload Section */
+.uploadSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: 100%;
+  justify-content: flex-start;
+}
+
+.uploadInput {
+  display: none;
+}
+
+.uploadLabel {
+  padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uploadLabel:hover {
+  background: rgba(255, 255, 255, 0.03);
+  transform: translateY(-1px);
+}
+
+.uploadingIndicator {
+  font-size: 0.8rem;
+  color: var(--brand2);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.uploadSpinner {
+  width: 0.9rem !important;
+  height: 0.9rem !important;
+}
+
+.uploadHint {
+  font-size: 0.75rem;
+  color: var(--ink-weak);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Loading and Error States */
+.loadingWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  color: white;
+}
+
+.loadingText {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.errorMessage {
+  color: #fca5a5;
+  background: rgba(220, 38, 38, 0.22);
+  border: 1px solid rgba(220, 38, 38, 0.5);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.errorDetails {
+  font-size: 0.9rem;
+  color: white;
+  margin: 1rem 0;
+}
+
+.errorList {
+  text-align: left;
+  display: inline-block;
+  font-size: 0.85rem;
+  color: white;
+  margin: 1rem 0;
+}
+
+.retryButton {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-image: linear-gradient(135deg, var(--brand2), #15803d);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+}
+
+.retryButton:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+}
+
+.noOrders {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  color: var(--ink-weak);
+  font-style: italic;
+}
+
+.noOrdersText {
+  font-size: 1.1rem;
+}
+
+.ordersCount {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--ink);
+  text-align: center;
+}
+
+/* Status Badges */
+.status_pending {
+  background: rgba(250, 204, 21, 0.18) !important;
+  color: #fde68a !important;
+  border: 1px solid rgba(250, 204, 21, 0.45);
+}
+
+.status_processing {
+  background: rgba(56, 189, 248, 0.2) !important;
+  color: #7dd3fc !important;
+  border: 1px solid rgba(56, 189, 248, 0.45);
+}
+
+.status_completed {
+  background: rgba(34, 197, 94, 0.2) !important;
+  color: #34d399 !important;
+  border: 1px solid rgba(34, 197, 94, 0.45);
+}
+
+.status_failed {
+  background: rgba(220, 38, 38, 0.22) !important;
+  color: #fca5a5 !important;
+  border: 1px solid rgba(220, 38, 38, 0.5);
+}
+
+.status_submitted {
+  background: rgba(56, 189, 248, 0.2) !important;
+  color: #7dd3fc !important;
+  border: 1px solid rgba(56, 189, 248, 0.45);
+}
+
+/* Modal overlay for large video preview */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.modalContent {
+  position: relative;
+  max-width: 95vw;
+  max-height: 95vh;
+  background: #000;
+  border-radius: 12px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  width: auto;
+  height: auto;
+}
+
+.modalCloseBtn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2.5rem;
+  color: #fff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  user-select: none;
+  transition: color 0.2s ease;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalCloseBtn:hover,
+.modalCloseBtn:focus {
+  color: var(--brand2);
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.modalVideo {
+  width: 100%;
+  height: auto;
+  max-height: 85vh;
+  border-radius: 12px;
+  background: #000;
+  outline: none;
+}
+
+/* Mobile Responsive Design      */
+
+@media (max-width: 768px) {
+  .invoiceHeader {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1rem !important;
+  }
+
+  .headerTitle {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .refreshButton {
+    width: 28%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+
+  .invoiceBody {
+    padding: 0 0.5rem 1rem;
+  }
+
+  .ordersGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .orderCard {
+    padding: 1rem;
+    min-height: 350px;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .packageInfo {
+    align-items: flex-start;
+  }
+
+  .cardActions {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .videoPlayer {
+    min-height: 180px;
+  }
+
+  .noVideoPlaceholder {
+    min-height: 150px;
+    padding: 1.5rem;
+  }
+
+  .playIcon {
+    font-size: 2.5rem;
+    width: 70px;
+    height: 70px;
+  }
+
+  .fullscreenText {
+    font-size: 0.8rem;
+  }
+
+  .videoCount {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ordersGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .orderCard {
+    padding: 0.75rem;
+    min-height: 320px;
+  }
+
+  .cardHeader {
+    margin-bottom: 1rem;
+  }
+
+  .orderId {
+    font-size: 1rem;
+  }
+
+  .videoPlayer {
+    min-height: 150px;
+  }
+
+  .statusButtons {
+    gap: 0.4rem;
+  }
+
+  .statusButton {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+    min-height: 40px;
+  }
+
+  .uploadLabel {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+    min-height: 40px;
+  }
+
+  .modalContent {
+    max-width: 98vw;
+    max-height: 90vh;
+  }
+
+  .videoCount {
+    font-size: 0.75rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 360px) {
+  .orderCard {
+    padding: 0.5rem;
+    min-height: 300px;
+  }
+
+  .cardContent {
+    gap: 0.75rem;
+  }
+
+  .videoPlayer {
+    min-height: 120px;
+  }
+
+  .sectionTitle {
+    font-size: 0.75rem;
+  }
+
+  .videoCount {
+    font-size: 0.7rem;
+  }
+}
